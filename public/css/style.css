@@ -1,0 +1,172 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  /* background-color: #03396c; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto-Bold';
+}
+
+h5 {
+  font-size: 1.28rem;
+}
+
+#chatContainer {
+  height: 85vh;
+  overflow-y: auto;
+}
+
+#footer {
+  text-align: center;
+}
+
+#intro {
+  height: 90vh;
+}
+
+#myPhoto {
+  width: 65%;
+  /* border-color: rgb(35, 165, 230) !important; */
+}
+
+.all {
+  height: 100vh;
+  padding: 0;
+}
+
+.broadcast {
+  background-color: rgb(224, 226, 226);
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  color: black;
+  border-radius: 3rem;
+  padding: 0.25rem 1rem 0.5rem;
+  font-size: 1rem;
+  width: fit-content;
+  margin-bottom: 0.7rem;
+  word-wrap: break-word;
+  max-width: 51%;
+}
+
+.btn {
+  border: none;
+  border-radius: 3rem;
+  --bs-btn-font-size: 1.8rem;
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 1.75rem;
+}
+
+.centre {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.chat {
+  color: black;
+  border-radius: 3rem;
+  padding: 0.4rem 0.9rem 1.1rem 0.95rem;
+  font-size: 1.36rem;
+  width: fit-content;
+  margin-bottom: 0.7rem;
+  word-wrap: break-word;
+  max-width: 51%;
+  min-width: 13.5%;
+  position: relative;
+}
+
+.feature-set {
+  text-align: center;
+}
+
+.magic {
+  position: absolute;
+  right: 1.55rem;
+  bottom: 0.63rem;
+  /* margin-left: auto !important;
+  margin-right: 0 !important;
+  text-align: right !important; */
+}
+
+.middle {
+  background-color: #03396c;
+  height: 300px;
+}
+
+.nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+}
+
+.nav-text {
+  color: #03396c;
+  font-size: 1.27rem;
+  font-weight: 500;
+}
+
+.otherside {
+  overflow-y: scroll;
+}
+
+.p-edit {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.receive {
+  background-color: rgb(35, 165, 230);
+  text-align: left;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.send {
+  background-color: rgb(17, 192, 146);
+  text-align: left;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.sideBar {
+  width: 18.5rem;
+  color: white;
+  background-color: #040b14;
+  align-items: center;
+}
+
+.side-icon {
+  background-color: #2f3242;
+  height: 2.6rem;
+  width: 2.6rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.side-icon:hover {
+  background-color: rgb(13, 120, 197);
+}
+
+.social-icon {
+  text-decoration: none;
+  color: inherit;
+  margin-right: 0.85rem;
+}
+
+.top-bar {
+  background-color: #040b14;
+}
+
+.wallpaper {
+  height: 70vh;
+}
