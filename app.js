@@ -49,6 +49,12 @@ io.on('connection', (socket) => {
     });
   });
 
+  socket.on('user-typing', () => {
+    socket.broadcast.emit('user-typing', {
+      message: `${users[socket.id]} is typing`,
+    });
+  });
+
   socket.on('disconnect', () => {
     let name = users[socket.id];
     activeUsers.delete(name);

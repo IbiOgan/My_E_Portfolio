@@ -20,6 +20,10 @@ socket.on('user-connected', (name) => {
   appendMessage(`${name} joined the chat`, null);
 });
 
+socket.on('user-typing', (data) => {
+  appendMessage(data.message, null, true);
+});
+
 socket.on('update list', (data) => {
   userList.innerHTML = '';
   data.map(function (user) {
@@ -46,14 +50,21 @@ chatForm.addEventListener('submit', (e) => {
   appendMessage(`You: ${message}`, true);
 });
 
-function appendMessage(message, status) {
-  const time = new Date();
-  const formattedTime = time.toLocaleString('en-US', {
-    hour: 'numeric',
-    minute: 'numeric',
-  });
+messageInput.addEventListener('input', handleTypeEvent);
 
+function appendMessage(message, status, typing = false) {
   //Status: True for Send and False for Receive, null for notification broadcast
+  if (typing) {
+    const html = `
+    <div id="hideAfterSeconds" class="broadcast">
+        ${message}        
+    </div>
+    `;
+
+    chatContainer.insertAdjacentHTML('beforeend', html);
+    chatContainer.scrollTop = chatContainer.scrollHeight;
+    return;
+  }
   if (status === null) {
     const html = `
     <div class="broadcast">
@@ -66,6 +77,13 @@ function appendMessage(message, status) {
     //window.scrollTo(0, chatContainer.scrollHeight);
     return;
   }
+
+  const time = new Date();
+  const formattedTime = time.toLocaleString('en-US', {
+    hour: 'numeric',
+    minute: 'numeric',
+  });
+
   const html = `
     <div class="chat ${status ? 'send' : 'receive'}">
         ${message}
@@ -83,4 +101,12 @@ function addToUsersList(userName) {
   `;
 
   userList.insertAdjacentHTML('beforeend', html);
+}
+
+function handleTypeEvent() {
+  socket.emit('user-typing');
+  messageInput.removeEventListener('input', handleTypeEvent);
+  setTimeout(() => {
+    messageInput.addEventListener('input', handleTypeEvent);
+  }, 10000);
 }

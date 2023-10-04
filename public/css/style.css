@@ -33,6 +33,19 @@ h5 {
   text-align: center;
 }
 
+#hideAfterSeconds {
+  animation: hideAnimation 0s ease-in 9s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes hideAnimation {
+  to {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+}
+
 #intro {
   min-height: 100vh;
 }
