@@ -31,6 +31,7 @@ const io = socket(server);
 const users = {};
 const activeUsers = new Set();
 
+// Handling socket events
 io.on('connection', (socket) => {
   console.log('Made Socket Connection');
   socket.on('new-user', (name) => {
