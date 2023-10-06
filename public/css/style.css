@@ -25,9 +25,12 @@ h5 {
 }
 
 #chatContainer {
-  height: 85vh;
+  height: 80vh;
   overflow-y: auto;
 }
+
+/* #education {
+} */
 
 #footer {
   text-align: center;
@@ -43,6 +46,7 @@ h5 {
     visibility: hidden;
     width: 0;
     height: 0;
+    display: none;
   }
 }
 
@@ -158,14 +162,24 @@ h5 {
   font-weight: 500;
 }
 
+.onhover:hover {
+  color: #1f8bd9 !important;
+}
+
 .otherside {
   overflow-y: scroll;
   padding-left: 0;
   padding-right: 0;
 }
 
+/* .otherside2 {
+  padding-left: 0;
+  padding-right: 0;
+  overflow: hidden;
+} */
+
 .p-edit {
-  width: 75%;
+  width: 95%;
   margin: 0 auto;
 }
 
@@ -216,6 +230,10 @@ h5 {
 
 .type {
   border-top: 20px dotted lime;
+}
+
+.type2 {
+  border-top: 20px dotted black;
 }
 
 .typing {

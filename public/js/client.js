@@ -97,7 +97,7 @@ function appendMessage(message, status, typing = false) {
 
 function addToUsersList(userName) {
   const html = `
-    <li class="ms-auto me-auto mb-2 fs-5">${userName}</li>
+    <li class="border border-3 border-info w-100 ms-auto me-auto mb-2 fs-5 text-center">${userName}</li>
   `;
 
   userList.insertAdjacentHTML('beforeend', html);
